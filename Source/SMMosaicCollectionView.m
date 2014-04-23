@@ -110,10 +110,12 @@
   return nil;
 }
 
--(void)scrollToImageAtIndex:(NSInteger)index {
-  [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]
-               atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
-                       animated:YES];
+-(void)scrollToImageAtIndex:(NSInteger)index animated:(BOOL)animated {
+  if ([self numberOfItemsInSection:0] > 0) {
+    [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]
+                 atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
+                         animated:animated];
+  }
 }
 
 #pragma mark Rotation handling

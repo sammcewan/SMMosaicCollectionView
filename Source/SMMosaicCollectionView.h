@@ -61,7 +61,10 @@
 
 /**
  Scrolls to a given image
+ 
+ @param index
+ @param animated
  */
--(void)scrollToImageAtIndex:(NSInteger)index;
+-(void)scrollToImageAtIndex:(NSInteger)index animated:(BOOL)animated;
 
 @end
