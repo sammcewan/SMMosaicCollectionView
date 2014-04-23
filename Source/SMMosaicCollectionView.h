@@ -29,6 +29,13 @@
  */
 -(UIImage *)imageForIndex:(NSInteger)index;
 
+/**
+ When an image is selected this call is made
+ 
+ @param index
+ */
+-(void)didSelectImageAtIndex:(NSInteger)index;
+
 @end
 
 /**

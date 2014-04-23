@@ -33,4 +33,12 @@
   [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
 }
 
+-(void)setHighlighted:(BOOL)highlighted{
+  if (highlighted) {
+    self.imageView.alpha = 0.7;
+  } else {
+    self.imageView.alpha = 1.0;
+  }
+}
+
 @end

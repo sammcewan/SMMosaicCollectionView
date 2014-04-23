@@ -53,6 +53,8 @@
   return self.imageArray[index];
 }
 
+-(void)didSelectImageAtIndex:(NSInteger)index {
+  NSLog(@"Tapped %i", index);
 }
 
 @end

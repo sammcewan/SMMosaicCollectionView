@@ -74,6 +74,12 @@
                           0, CGRectGetMidX(self.frame));
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+  if ([self.mosaicDelegate respondsToSelector:@selector(didSelectImageAtIndex:)]) {
+    [self.mosaicDelegate didSelectImageAtIndex:indexPath.row];
+  }
+}
+
 #pragma mark - Methods to implement centered scrolling
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
   if (!decelerate) {
