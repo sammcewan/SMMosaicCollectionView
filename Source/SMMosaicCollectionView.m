@@ -104,6 +104,12 @@
   return nil;
 }
 
+-(void)scrollToImageAtIndex:(NSInteger)index {
+  [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]
+               atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
+                       animated:YES];
+}
+
 #pragma mark Rotation handling
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
   [self centerCollectionView:YES];

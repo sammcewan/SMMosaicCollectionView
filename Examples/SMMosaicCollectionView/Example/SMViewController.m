@@ -31,6 +31,15 @@
   [self.view addSubview:self.mosaicCollectionView];
 }
 
+- (void)buildImageArray {
+  NSMutableArray *mutableImageArray = [NSMutableArray array];
+  for (NSInteger i = 0; i < 10; i++) {
+    NSString *imageName = [NSString stringWithFormat:@"%i.jpeg", i];
+    [mutableImageArray addObject:[UIImage imageNamed:imageName]];
+  }
+  self.imageArray = mutableImageArray;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
   [self.mosaicCollectionView centerCollectionView:NO];
 }
@@ -44,13 +53,6 @@
   return self.imageArray[index];
 }
 
-- (void)buildImageArray {
-  NSMutableArray *mutableImageArray = [NSMutableArray array];
-  for (NSInteger i = 0; i < 10; i++) {
-    NSString *imageName = [NSString stringWithFormat:@"%i.jpeg", i];
-    [mutableImageArray addObject:[UIImage imageNamed:imageName]];
-  }
-  self.imageArray = mutableImageArray;
 }
 
 @end

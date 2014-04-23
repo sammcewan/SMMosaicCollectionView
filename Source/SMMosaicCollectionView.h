@@ -51,4 +51,10 @@
  @param animated
  */
 -(void)centerCollectionView:(BOOL)animated;
+
+/**
+ Scrolls to a given image
+ */
+-(void)scrollToImageAtIndex:(NSInteger)index;
+
 @end
