@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22427C551907AB1F005D7522 /* SMImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22427C521907AB1F005D7522 /* SMImageCell.m */; };
+		22427C561907AB1F005D7522 /* SMMosaicCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22427C541907AB1F005D7522 /* SMMosaicCollectionView.m */; };
 		22B884AC1904D80000E50FDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B884AB1904D80000E50FDC /* Foundation.framework */; };
 		22B884AE1904D80000E50FDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B884AD1904D80000E50FDC /* CoreGraphics.framework */; };
 		22B884B01904D80000E50FDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B884AF1904D80000E50FDC /* UIKit.framework */; };
@@ -14,7 +16,6 @@
 		22B884B81904D80000E50FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884B71904D80000E50FDC /* main.m */; };
 		22B884BC1904D80000E50FDC /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884BB1904D80000E50FDC /* SMAppDelegate.m */; };
 		22B884BE1904D80000E50FDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B884BD1904D80000E50FDC /* Images.xcassets */; };
-		22B884DF1904DA1900E50FDC /* SMImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884DE1904DA1900E50FDC /* SMImageCell.m */; };
 		22B884E21904DA3B00E50FDC /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884E11904DA3B00E50FDC /* SMViewController.m */; };
 		22B884EF1904DF0C00E50FDC /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E51904DF0C00E50FDC /* 0.jpeg */; };
 		22B884F01904DF0C00E50FDC /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E61904DF0C00E50FDC /* 1.jpeg */; };
@@ -26,10 +27,13 @@
 		22B884F61904DF0C00E50FDC /* 7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884EC1904DF0C00E50FDC /* 7.jpeg */; };
 		22B884F71904DF0C00E50FDC /* 8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884ED1904DF0C00E50FDC /* 8.jpeg */; };
 		22B884F81904DF0C00E50FDC /* 9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884EE1904DF0C00E50FDC /* 9.jpeg */; };
-		22B884FC190517CF00E50FDC /* SMMosaicCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884FB190517CF00E50FDC /* SMMosaicCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22427C511907AB1F005D7522 /* SMImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMImageCell.h; sourceTree = "<group>"; };
+		22427C521907AB1F005D7522 /* SMImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMImageCell.m; sourceTree = "<group>"; };
+		22427C531907AB1F005D7522 /* SMMosaicCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMosaicCollectionView.h; sourceTree = "<group>"; };
+		22427C541907AB1F005D7522 /* SMMosaicCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMosaicCollectionView.m; sourceTree = "<group>"; };
 		22B884A81904D80000E50FDC /* SMMosaicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMMosaicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B884AB1904D80000E50FDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22B884AD1904D80000E50FDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,8 +46,6 @@
 		22B884BB1904D80000E50FDC /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
 		22B884BD1904D80000E50FDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22B884C41904D80000E50FDC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		22B884DD1904DA1900E50FDC /* SMImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMImageCell.h; path = ../Example/SMImageCell.h; sourceTree = "<group>"; };
-		22B884DE1904DA1900E50FDC /* SMImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMImageCell.m; path = ../Example/SMImageCell.m; sourceTree = "<group>"; };
 		22B884E01904DA3B00E50FDC /* SMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMViewController.h; path = Example/SMViewController.h; sourceTree = "<group>"; };
 		22B884E11904DA3B00E50FDC /* SMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMViewController.m; path = Example/SMViewController.m; sourceTree = "<group>"; };
 		22B884E51904DF0C00E50FDC /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		22B884EC1904DF0C00E50FDC /* 7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpeg; sourceTree = "<group>"; };
 		22B884ED1904DF0C00E50FDC /* 8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpeg; sourceTree = "<group>"; };
 		22B884EE1904DF0C00E50FDC /* 9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpeg; sourceTree = "<group>"; };
-		22B884FA190517CF00E50FDC /* SMMosaicCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMosaicCollectionView.h; sourceTree = "<group>"; };
-		22B884FB190517CF00E50FDC /* SMMosaicCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMosaicCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +74,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22427C501907AB1F005D7522 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				22427C511907AB1F005D7522 /* SMImageCell.h */,
+				22427C521907AB1F005D7522 /* SMImageCell.m */,
+				22427C531907AB1F005D7522 /* SMMosaicCollectionView.h */,
+				22427C541907AB1F005D7522 /* SMMosaicCollectionView.m */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
 		22B8849F1904D80000E50FDC = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +119,7 @@
 			children = (
 				22B884BA1904D80000E50FDC /* SMAppDelegate.h */,
 				22B884BB1904D80000E50FDC /* SMAppDelegate.m */,
-				22B884F91905179F00E50FDC /* Source */,
+				22427C501907AB1F005D7522 /* Source */,
 				22B884E31904DA4600E50FDC /* Example */,
 				22B884BD1904D80000E50FDC /* Images.xcassets */,
 				22B884B21904D80000E50FDC /* Supporting Files */,
@@ -152,17 +164,6 @@
 			);
 			name = Images;
 			path = Example/Images;
-			sourceTree = "<group>";
-		};
-		22B884F91905179F00E50FDC /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				22B884FA190517CF00E50FDC /* SMMosaicCollectionView.h */,
-				22B884FB190517CF00E50FDC /* SMMosaicCollectionView.m */,
-				22B884DD1904DA1900E50FDC /* SMImageCell.h */,
-				22B884DE1904DA1900E50FDC /* SMImageCell.m */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,11 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B884FC190517CF00E50FDC /* SMMosaicCollectionView.m in Sources */,
+				22427C561907AB1F005D7522 /* SMMosaicCollectionView.m in Sources */,
 				22B884E21904DA3B00E50FDC /* SMViewController.m in Sources */,
 				22B884BC1904D80000E50FDC /* SMAppDelegate.m in Sources */,
 				22B884B81904D80000E50FDC /* main.m in Sources */,
-				22B884DF1904DA1900E50FDC /* SMImageCell.m in Sources */,
+				22427C551907AB1F005D7522 /* SMImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
