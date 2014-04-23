@@ -14,22 +14,20 @@
 		22B884B81904D80000E50FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884B71904D80000E50FDC /* main.m */; };
 		22B884BC1904D80000E50FDC /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884BB1904D80000E50FDC /* SMAppDelegate.m */; };
 		22B884BE1904D80000E50FDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B884BD1904D80000E50FDC /* Images.xcassets */; };
-		22B884C51904D80000E50FDC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B884C41904D80000E50FDC /* XCTest.framework */; };
-		22B884C61904D80000E50FDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B884AB1904D80000E50FDC /* Foundation.framework */; };
-		22B884C71904D80000E50FDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B884AF1904D80000E50FDC /* UIKit.framework */; };
-		22B884CF1904D80000E50FDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22B884CD1904D80000E50FDC /* InfoPlist.strings */; };
-		22B884D11904D80000E50FDC /* SMMosaicCollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884D01904D80000E50FDC /* SMMosaicCollectionViewTests.m */; };
+		22B884DF1904DA1900E50FDC /* SMImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884DE1904DA1900E50FDC /* SMImageCell.m */; };
+		22B884E21904DA3B00E50FDC /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884E11904DA3B00E50FDC /* SMViewController.m */; };
+		22B884EF1904DF0C00E50FDC /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E51904DF0C00E50FDC /* 0.jpeg */; };
+		22B884F01904DF0C00E50FDC /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E61904DF0C00E50FDC /* 1.jpeg */; };
+		22B884F11904DF0C00E50FDC /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E71904DF0C00E50FDC /* 2.jpeg */; };
+		22B884F21904DF0C00E50FDC /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E81904DF0C00E50FDC /* 3.jpeg */; };
+		22B884F31904DF0C00E50FDC /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884E91904DF0C00E50FDC /* 4.jpeg */; };
+		22B884F41904DF0C00E50FDC /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884EA1904DF0C00E50FDC /* 5.jpeg */; };
+		22B884F51904DF0C00E50FDC /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884EB1904DF0C00E50FDC /* 6.jpeg */; };
+		22B884F61904DF0C00E50FDC /* 7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884EC1904DF0C00E50FDC /* 7.jpeg */; };
+		22B884F71904DF0C00E50FDC /* 8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884ED1904DF0C00E50FDC /* 8.jpeg */; };
+		22B884F81904DF0C00E50FDC /* 9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22B884EE1904DF0C00E50FDC /* 9.jpeg */; };
+		22B884FC190517CF00E50FDC /* SMMosaicCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B884FB190517CF00E50FDC /* SMMosaicCollectionView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		22B884C81904D80000E50FDC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22B884A01904D80000E50FDC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22B884A71904D80000E50FDC;
-			remoteInfo = SMMosaicCollectionView;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22B884A81904D80000E50FDC /* SMMosaicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMMosaicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,11 +41,23 @@
 		22B884BA1904D80000E50FDC /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
 		22B884BB1904D80000E50FDC /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
 		22B884BD1904D80000E50FDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		22B884C31904D80000E50FDC /* SMMosaicCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMMosaicCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B884C41904D80000E50FDC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		22B884CC1904D80000E50FDC /* SMMosaicCollectionViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMMosaicCollectionViewTests-Info.plist"; sourceTree = "<group>"; };
-		22B884CE1904D80000E50FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		22B884D01904D80000E50FDC /* SMMosaicCollectionViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMosaicCollectionViewTests.m; sourceTree = "<group>"; };
+		22B884DD1904DA1900E50FDC /* SMImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMImageCell.h; path = ../Example/SMImageCell.h; sourceTree = "<group>"; };
+		22B884DE1904DA1900E50FDC /* SMImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMImageCell.m; path = ../Example/SMImageCell.m; sourceTree = "<group>"; };
+		22B884E01904DA3B00E50FDC /* SMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMViewController.h; path = Example/SMViewController.h; sourceTree = "<group>"; };
+		22B884E11904DA3B00E50FDC /* SMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMViewController.m; path = Example/SMViewController.m; sourceTree = "<group>"; };
+		22B884E51904DF0C00E50FDC /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = "<group>"; };
+		22B884E61904DF0C00E50FDC /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		22B884E71904DF0C00E50FDC /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		22B884E81904DF0C00E50FDC /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		22B884E91904DF0C00E50FDC /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		22B884EA1904DF0C00E50FDC /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
+		22B884EB1904DF0C00E50FDC /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
+		22B884EC1904DF0C00E50FDC /* 7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpeg; sourceTree = "<group>"; };
+		22B884ED1904DF0C00E50FDC /* 8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpeg; sourceTree = "<group>"; };
+		22B884EE1904DF0C00E50FDC /* 9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpeg; sourceTree = "<group>"; };
+		22B884FA190517CF00E50FDC /* SMMosaicCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMosaicCollectionView.h; sourceTree = "<group>"; };
+		22B884FB190517CF00E50FDC /* SMMosaicCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMosaicCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22B884C01904D80000E50FDC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22B884C51904D80000E50FDC /* XCTest.framework in Frameworks */,
-				22B884C71904D80000E50FDC /* UIKit.framework in Frameworks */,
-				22B884C61904D80000E50FDC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				22B884B11904D80000E50FDC /* SMMosaicCollectionView */,
-				22B884CA1904D80000E50FDC /* SMMosaicCollectionViewTests */,
 				22B884AA1904D80000E50FDC /* Frameworks */,
 				22B884A91904D80000E50FDC /* Products */,
 			);
@@ -88,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				22B884A81904D80000E50FDC /* SMMosaicCollectionView.app */,
-				22B884C31904D80000E50FDC /* SMMosaicCollectionViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +107,8 @@
 			children = (
 				22B884BA1904D80000E50FDC /* SMAppDelegate.h */,
 				22B884BB1904D80000E50FDC /* SMAppDelegate.m */,
+				22B884F91905179F00E50FDC /* Source */,
+				22B884E31904DA4600E50FDC /* Example */,
 				22B884BD1904D80000E50FDC /* Images.xcassets */,
 				22B884B21904D80000E50FDC /* Supporting Files */,
 			);
@@ -126,22 +126,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		22B884CA1904D80000E50FDC /* SMMosaicCollectionViewTests */ = {
+		22B884E31904DA4600E50FDC /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				22B884D01904D80000E50FDC /* SMMosaicCollectionViewTests.m */,
-				22B884CB1904D80000E50FDC /* Supporting Files */,
+				22B884E01904DA3B00E50FDC /* SMViewController.h */,
+				22B884E11904DA3B00E50FDC /* SMViewController.m */,
+				22B884E41904DF0C00E50FDC /* Images */,
 			);
-			path = SMMosaicCollectionViewTests;
+			name = Example;
 			sourceTree = "<group>";
 		};
-		22B884CB1904D80000E50FDC /* Supporting Files */ = {
+		22B884E41904DF0C00E50FDC /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				22B884CC1904D80000E50FDC /* SMMosaicCollectionViewTests-Info.plist */,
-				22B884CD1904D80000E50FDC /* InfoPlist.strings */,
+				22B884E51904DF0C00E50FDC /* 0.jpeg */,
+				22B884E61904DF0C00E50FDC /* 1.jpeg */,
+				22B884E71904DF0C00E50FDC /* 2.jpeg */,
+				22B884E81904DF0C00E50FDC /* 3.jpeg */,
+				22B884E91904DF0C00E50FDC /* 4.jpeg */,
+				22B884EA1904DF0C00E50FDC /* 5.jpeg */,
+				22B884EB1904DF0C00E50FDC /* 6.jpeg */,
+				22B884EC1904DF0C00E50FDC /* 7.jpeg */,
+				22B884ED1904DF0C00E50FDC /* 8.jpeg */,
+				22B884EE1904DF0C00E50FDC /* 9.jpeg */,
 			);
-			name = "Supporting Files";
+			name = Images;
+			path = Example/Images;
+			sourceTree = "<group>";
+		};
+		22B884F91905179F00E50FDC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				22B884FA190517CF00E50FDC /* SMMosaicCollectionView.h */,
+				22B884FB190517CF00E50FDC /* SMMosaicCollectionView.m */,
+				22B884DD1904DA1900E50FDC /* SMImageCell.h */,
+				22B884DE1904DA1900E50FDC /* SMImageCell.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,24 +185,6 @@
 			productReference = 22B884A81904D80000E50FDC /* SMMosaicCollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		22B884C21904D80000E50FDC /* SMMosaicCollectionViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22B884D71904D80000E50FDC /* Build configuration list for PBXNativeTarget "SMMosaicCollectionViewTests" */;
-			buildPhases = (
-				22B884BF1904D80000E50FDC /* Sources */,
-				22B884C01904D80000E50FDC /* Frameworks */,
-				22B884C11904D80000E50FDC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22B884C91904D80000E50FDC /* PBXTargetDependency */,
-			);
-			name = SMMosaicCollectionViewTests;
-			productName = SMMosaicCollectionViewTests;
-			productReference = 22B884C31904D80000E50FDC /* SMMosaicCollectionViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,11 +194,6 @@
 				CLASSPREFIX = SM;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Sam McEwan";
-				TargetAttributes = {
-					22B884C21904D80000E50FDC = {
-						TestTargetID = 22B884A71904D80000E50FDC;
-					};
-				};
 			};
 			buildConfigurationList = 22B884A31904D80000E50FDC /* Build configuration list for PBXProject "SMMosaicCollectionView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -210,7 +208,6 @@
 			projectRoot = "";
 			targets = (
 				22B884A71904D80000E50FDC /* SMMosaicCollectionView */,
-				22B884C21904D80000E50FDC /* SMMosaicCollectionViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,16 +217,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B884F11904DF0C00E50FDC /* 2.jpeg in Resources */,
+				22B884EF1904DF0C00E50FDC /* 0.jpeg in Resources */,
 				22B884B61904D80000E50FDC /* InfoPlist.strings in Resources */,
+				22B884F81904DF0C00E50FDC /* 9.jpeg in Resources */,
+				22B884F21904DF0C00E50FDC /* 3.jpeg in Resources */,
+				22B884F71904DF0C00E50FDC /* 8.jpeg in Resources */,
+				22B884F31904DF0C00E50FDC /* 4.jpeg in Resources */,
+				22B884F61904DF0C00E50FDC /* 7.jpeg in Resources */,
 				22B884BE1904D80000E50FDC /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22B884C11904D80000E50FDC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22B884CF1904D80000E50FDC /* InfoPlist.strings in Resources */,
+				22B884F51904DF0C00E50FDC /* 6.jpeg in Resources */,
+				22B884F01904DF0C00E50FDC /* 1.jpeg in Resources */,
+				22B884F41904DF0C00E50FDC /* 5.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,42 +239,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B884FC190517CF00E50FDC /* SMMosaicCollectionView.m in Sources */,
+				22B884E21904DA3B00E50FDC /* SMViewController.m in Sources */,
 				22B884BC1904D80000E50FDC /* SMAppDelegate.m in Sources */,
 				22B884B81904D80000E50FDC /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22B884BF1904D80000E50FDC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22B884D11904D80000E50FDC /* SMMosaicCollectionViewTests.m in Sources */,
+				22B884DF1904DA1900E50FDC /* SMImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		22B884C91904D80000E50FDC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22B884A71904D80000E50FDC /* SMMosaicCollectionView */;
-			targetProxy = 22B884C81904D80000E50FDC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22B884B41904D80000E50FDC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				22B884B51904D80000E50FDC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		22B884CD1904D80000E50FDC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22B884CE1904D80000E50FDC /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -381,46 +359,6 @@
 			};
 			name = Release;
 		};
-		22B884D81904D80000E50FDC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SMMosaicCollectionView.app/SMMosaicCollectionView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMMosaicCollectionView/SMMosaicCollectionView-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SMMosaicCollectionViewTests/SMMosaicCollectionViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		22B884D91904D80000E50FDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SMMosaicCollectionView.app/SMMosaicCollectionView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMMosaicCollectionView/SMMosaicCollectionView-Prefix.pch";
-				INFOPLIST_FILE = "SMMosaicCollectionViewTests/SMMosaicCollectionViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,14 +378,7 @@
 				22B884D61904D80000E50FDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		22B884D71904D80000E50FDC /* Build configuration list for PBXNativeTarget "SMMosaicCollectionViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22B884D81904D80000E50FDC /* Debug */,
-				22B884D91904D80000E50FDC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
