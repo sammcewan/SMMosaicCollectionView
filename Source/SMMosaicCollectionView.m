@@ -48,7 +48,13 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-  return [self.mosaicDelegate numberOfImages];
+  NSInteger numberOfImages = [self.mosaicDelegate numberOfImages];
+  if (numberOfImages == 1) {
+    self.scrollEnabled = NO;
+  } else {
+    self.scrollEnabled = YES;
+  }
+  return numberOfImages;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,7 +102,7 @@
   centerCell = self.centerCell;
   if (centerCell) {
     [self setContentOffset:CGPointMake(centerCell.center.x - CGRectGetMidX(self.frame), 0)
-                             animated:animated];
+                  animated:animated];
   }
 }
 
