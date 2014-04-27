@@ -36,6 +36,16 @@
  */
 -(void)didSelectImageAtIndex:(NSInteger)index;
 
+@optional
+/**
+ Delegate method to return an overlay UIImage to be displayed
+ 
+ @param index of overlay image to display
+ 
+ @return the image to be displayed
+ */
+-(UIImage *)overlayImageForIndex:(NSInteger)index;
+
 @end
 
 /**

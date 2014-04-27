@@ -18,4 +18,13 @@
  */
 -(void)configureCell:(UIImage *)image size:(CGSize)size;
 
+/**
+ Configures an SMImageCell with a given image, overlay and size
+ 
+ @param image        to display
+ @param overlayImage image to place on top. Useful for repeating an image.
+ @param size         to set image
+ */
+-(void)configureCell:(UIImage *)image overlay:(UIImage *)overlayImage size:(CGSize)size;
+
 @end

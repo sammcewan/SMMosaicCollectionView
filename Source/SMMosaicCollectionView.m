@@ -59,10 +59,14 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   UIImage *image = [self.mosaicDelegate imageForIndex:indexPath.row];
+  UIImage *overlayImage;
+  if ([self.mosaicDelegate respondsToSelector:@selector(overlayImageForIndex:)]) {
+    overlayImage = [self.mosaicDelegate overlayImageForIndex:indexPath.row];
+  }
   CGSize size = [self sizeToFit:image.size];
   SMImageCell *cell = (SMImageCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SMImageCell class])
                                                                                forIndexPath:indexPath];
-  [cell configureCell:image size:size];
+  [cell configureCell:image overlay:overlayImage size:size];
   return cell;
 }
 
