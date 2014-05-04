@@ -107,8 +107,11 @@
 
 -(UICollectionViewCell *)centerCell {
   CGPoint centerPoint = CGPointMake(self.contentOffset.x + CGRectGetMidX(self.frame), 0);
+  CGRect cellFrame;
   for (UICollectionViewCell *cell in [self visibleCells]) {
-    if (CGRectContainsPoint(cell.frame, centerPoint)) {
+    cellFrame = CGRectMake(floorf(CGRectGetMinX(cell.frame))-1, floorf(CGRectGetMinY(cell.frame))-1,
+                           ceilf(CGRectGetWidth(cell.frame))+2, ceilf(CGRectGetHeight(cell.frame))+2);
+    if (  CGRectContainsPoint(cellFrame, centerPoint)) {
       return cell;
     }
   }
