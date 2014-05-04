@@ -49,11 +49,6 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
   NSInteger numberOfImages = [self.mosaicDelegate numberOfImages];
-  if (numberOfImages == 1) {
-    self.scrollEnabled = NO;
-  } else {
-    self.scrollEnabled = YES;
-  }
   return numberOfImages;
 }
 
