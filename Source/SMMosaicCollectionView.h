@@ -60,14 +60,14 @@
  
  @return an instance of SMMosaicCollectionView
  */
--(id)initWithDelegate:(id<SMMosaicCollectionViewDelegate>)delegate;
+-(id)initWithDelegate:(id<SMMosaicCollectionViewDelegate>)delegate centered:(BOOL)centered;
 
 /**
  Centers the collection view on the middle cell
  
  @param animated
  */
--(void)centerCollectionView:(BOOL)animated;
+-(void)alignCollectionView:(BOOL)animated;
 
 /**
  Scrolls to a given image
