@@ -116,7 +116,8 @@
     [self setContentOffset:CGPointMake(alignCell.center.x - CGRectGetMidX(self.frame), 0)
                   animated:animated];
   } else if (alignCell) {
-    if (ceil(self.contentOffset.x + self.frame.size.width) >= self.contentSize.width) {
+    if (self.contentSize.width > self.frame.size.width &&
+        ceil(self.contentOffset.x + self.frame.size.width) >= self.contentSize.width) {
       [self setContentOffset:CGPointMake(self.contentSize.width - self.frame.size.width, 0)
                     animated:animated];
     } else {
