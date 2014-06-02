@@ -19,8 +19,9 @@
   self = [super initWithFrame:frame];
   if (self) {
     _imageView = [[UIImageView alloc] initWithFrame:frame];
+    _imageView.contentMode = UIViewContentModeScaleAspectFill;
     _imageView.frame = frame;
-    _imageView.backgroundColor = [UIColor blueColor];
+    _imageView.backgroundColor = [UIColor clearColor];
     _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addSubview:_imageView];
     

@@ -26,11 +26,8 @@
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     self.showsHorizontalScrollIndicator = NO;
-    if (self.centered) {
-      self.bounces = YES;
-    } else {
-      self.bounces = NO;
-    }
+    self.alwaysBounceHorizontal = YES;
+
     self.delegate = self;
     self.dataSource = self;
     [self registerClass:[SMImageCell class] forCellWithReuseIdentifier:NSStringFromClass([SMImageCell class])];
@@ -47,7 +44,7 @@
   CGSize fitSize = self.bounds.size;
   CGFloat width = (fitSize.height/size.height)*size.width;
   CGFloat height = fitSize.height;
-  return CGSizeMake(width, height);
+  return CGSizeMake(floor(width), floor(height));
 }
 
 #pragma mark - UICollectionView methods
