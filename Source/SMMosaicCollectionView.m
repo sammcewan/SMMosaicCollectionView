@@ -125,6 +125,9 @@
                     animated:animated];
     }
   }
+  if (alignCell) {
+    _currentAlignedIndex = [self indexPathForCell:alignCell].row;
+  }
 }
 
 -(UICollectionViewCell *)leftCell {

@@ -77,4 +77,6 @@
  */
 -(void)scrollToImageAtIndex:(NSInteger)index animated:(BOOL)animated;
 
+@property (nonatomic, readonly) NSInteger currentAlignedIndex;
+
 @end
