@@ -77,6 +77,9 @@
  */
 -(void)scrollToImageAtIndex:(NSInteger)index animated:(BOOL)animated;
 
+/**
+ *  Returns the index of the currently aligned cell
+ */
 @property (nonatomic, readonly) NSInteger currentAlignedIndex;
 
 @end

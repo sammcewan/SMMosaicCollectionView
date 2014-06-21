@@ -115,19 +115,22 @@
   if (alignCell && self.centered) {
     [self setContentOffset:CGPointMake(alignCell.center.x - CGRectGetMidX(self.frame), 0)
                   animated:animated];
+    _currentAlignedIndex = [self indexPathForCell:alignCell].row;
   } else if (alignCell) {
     if (self.contentSize.width > self.frame.size.width &&
         ceil(self.contentOffset.x + self.frame.size.width) >= self.contentSize.width) {
       [self setContentOffset:CGPointMake(self.contentSize.width - self.frame.size.width, 0)
                     animated:animated];
+      _currentAlignedIndex = [self numberOfItemsInSection:0] - 1;
     } else {
       [self setContentOffset:CGPointMake(CGRectGetMinX(alignCell.frame), 0)
                     animated:animated];
+      if (alignCell) {
+        _currentAlignedIndex = [self indexPathForCell:alignCell].row;
+      }
     }
   }
-  if (alignCell) {
-    _currentAlignedIndex = [self indexPathForCell:alignCell].row;
-  }
+
 }
 
 -(UICollectionViewCell *)leftCell {
