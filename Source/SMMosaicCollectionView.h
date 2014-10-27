@@ -49,6 +49,24 @@
 @end
 
 /**
+ *  Various attachment types
+ */
+typedef NS_ENUM(NSUInteger, SMMosaicCollectionAlignment) {
+  /**
+   *  Aligns left when more than one and center when one
+   */
+  SMMosaicCollectionAlignmentMixed,
+  /**
+   *  Aligns left always
+   */
+  SMMosaicCollectionAlignmentLeft,
+  /**
+   *  Aligns center always
+   */
+  SMMosaicCollectionAlignmentCenter
+};
+
+/**
  A subclass of UICollectionView with a predefined layout to suit the desired effect.
  */
 @interface SMMosaicCollectionView : UICollectionView
@@ -60,14 +78,7 @@
  
  @return an instance of SMMosaicCollectionView
  */
--(id)initWithDelegate:(id<SMMosaicCollectionViewDelegate>)delegate centered:(BOOL)centered;
-
-/**
- Centers the collection view on the middle cell
- 
- @param animated
- */
--(void)alignCollectionView:(BOOL)animated;
+-(id)initWithDelegate:(id<SMMosaicCollectionViewDelegate>)delegate alignment:(SMMosaicCollectionAlignment)alignment;
 
 /**
  Scrolls to a given image
@@ -78,8 +89,20 @@
 -(void)scrollToImageAtIndex:(NSInteger)index animated:(BOOL)animated;
 
 /**
+ Centers the collection view on the middle cell
+
+ @param animated
+ */
+-(void)alignCollectionView:(BOOL)animated;
+
+/**
  *  Returns the index of the currently aligned cell
  */
 @property (nonatomic, readonly) NSInteger currentAlignedIndex;
+
+/**
+ *  Returns the type of collection view alignment
+ */
+@property (nonatomic, readonly) SMMosaicCollectionAlignment alignment;
 
 @end

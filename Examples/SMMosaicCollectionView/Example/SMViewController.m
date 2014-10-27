@@ -19,7 +19,7 @@
 - (id)init {
   self = [super init];
   if (self) {
-    _mosaicCollectionView = [[SMMosaicCollectionView alloc] initWithDelegate:self];
+    _mosaicCollectionView = [[SMMosaicCollectionView alloc] initWithDelegate:self alignment:SMMosaicCollectionAlignmentCenter];
   }
   return self;
 }
@@ -34,14 +34,14 @@
 - (void)buildImageArray {
   NSMutableArray *mutableImageArray = [NSMutableArray array];
   for (NSInteger i = 0; i < 10; i++) {
-    NSString *imageName = [NSString stringWithFormat:@"%i.jpeg", i];
+    NSString *imageName = [NSString stringWithFormat:@"%li.jpeg", (long)i];
     [mutableImageArray addObject:[UIImage imageNamed:imageName]];
   }
   self.imageArray = mutableImageArray;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [self.mosaicCollectionView centerCollectionView:NO];
+  [self.mosaicCollectionView alignCollectionView:NO];
 }
 
 #pragma mark - SMMosaicCollectionViewDelegate
@@ -54,7 +54,7 @@
 }
 
 -(void)didSelectImageAtIndex:(NSInteger)index {
-  NSLog(@"Tapped %i", index);
+  NSLog(@"Tapped %li", (long)index);
 }
 
 @end

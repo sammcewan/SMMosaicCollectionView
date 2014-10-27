@@ -11,12 +11,12 @@
 
 @interface SMMosaicCollectionView () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, weak) id<SMMosaicCollectionViewDelegate> mosaicDelegate;
-@property (nonatomic, assign) BOOL centered;
+@property (nonatomic, assign) SMMosaicCollectionAlignment alignment;
 @end
 
 @implementation SMMosaicCollectionView
 
--(id)initWithDelegate:(id<SMMosaicCollectionViewDelegate>)delegate centered:(BOOL)centered {
+-(id)initWithDelegate:(id<SMMosaicCollectionViewDelegate>)delegate alignment:(SMMosaicCollectionAlignment)alignment {
   UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
   [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
   [flowLayout setMinimumInteritemSpacing:0.0f];
@@ -33,7 +33,7 @@
     [self registerClass:[SMImageCell class] forCellWithReuseIdentifier:NSStringFromClass([SMImageCell class])];
     
     self.mosaicDelegate = delegate;
-    _centered = centered;
+    self.alignment = alignment;
 
     [self reloadData];
   }
@@ -80,11 +80,23 @@
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
                         layout:(UICollectionViewLayout*)collectionViewLayout
         insetForSectionAtIndex:(NSInteger)section {
-  if (self.centered) {
-    return UIEdgeInsetsMake(0, CGRectGetMidX(self.frame), 0, CGRectGetMidX(self.frame));
-  }
-  else {
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+  switch (self.alignment) {
+    case SMMosaicCollectionAlignmentMixed: {
+      if (self.mosaicDelegate.numberOfImages == 1) {
+        return UIEdgeInsetsMake(0, CGRectGetMidX(self.frame), 0, CGRectGetMidX(self.frame));
+      } else {
+        return UIEdgeInsetsMake(0, 0, 0, 0);
+      }
+      break;
+    }
+    case SMMosaicCollectionAlignmentCenter: {
+      return UIEdgeInsetsMake(0, CGRectGetMidX(self.frame), 0, CGRectGetMidX(self.frame));
+      break;
+    }
+    case SMMosaicCollectionAlignmentLeft: {
+      return UIEdgeInsetsMake(0, 0, 0, 0);
+      break;
+    }
   }
 }
 
@@ -107,30 +119,51 @@
 
 -(void)alignCollectionView:(BOOL)animated {
   UICollectionViewCell *alignCell;
-  if (self.centered) {
-    alignCell = self.centerCell;
-  } else {
-    alignCell = self.leftCell;
-  }
-  if (alignCell && self.centered) {
-    [self setContentOffset:CGPointMake(alignCell.center.x - CGRectGetMidX(self.frame), 0)
-                  animated:animated];
-    _currentAlignedIndex = [self indexPathForCell:alignCell].row;
-  } else if (alignCell) {
-    if (self.contentSize.width > self.frame.size.width &&
-        ceil(self.contentOffset.x + self.frame.size.width) >= self.contentSize.width) {
-      [self setContentOffset:CGPointMake(self.contentSize.width - self.frame.size.width, 0)
-                    animated:animated];
-      _currentAlignedIndex = [self numberOfItemsInSection:0] - 1;
-    } else {
-      [self setContentOffset:CGPointMake(CGRectGetMinX(alignCell.frame), 0)
-                    animated:animated];
-      if (alignCell) {
-        _currentAlignedIndex = [self indexPathForCell:alignCell].row;
+  switch (self.alignment) {
+    case SMMosaicCollectionAlignmentMixed: {
+      if (self.mosaicDelegate.numberOfImages == 1) {
+        [self scrollToImageAtIndex:0 animated:animated];
+      } else {
+        alignCell = self.leftCell;
+        if (self.contentSize.width > self.frame.size.width &&
+            ceil(self.contentOffset.x + self.frame.size.width) >= self.contentSize.width) {
+          [self setContentOffset:CGPointMake(self.contentSize.width - self.frame.size.width, 0)
+                        animated:animated];
+          _currentAlignedIndex = [self numberOfItemsInSection:0] - 1;
+        } else {
+          [self setContentOffset:CGPointMake(CGRectGetMinX(alignCell.frame), 0)
+                        animated:animated];
+          if (alignCell) {
+            _currentAlignedIndex = [self indexPathForCell:alignCell].row;
+          }
+        }
       }
+      break;
+    }
+    case SMMosaicCollectionAlignmentCenter: {
+      alignCell = self.centerCell;
+      [self setContentOffset:CGPointMake(alignCell.center.x - CGRectGetMidX(self.frame), 0)
+                    animated:animated];
+      _currentAlignedIndex = [self indexPathForCell:alignCell].row;
+      break;
+    }
+    case SMMosaicCollectionAlignmentLeft: {
+      alignCell = self.leftCell;
+      if (self.contentSize.width > self.frame.size.width &&
+          ceil(self.contentOffset.x + self.frame.size.width) >= self.contentSize.width) {
+        [self setContentOffset:CGPointMake(self.contentSize.width - self.frame.size.width, 0)
+                      animated:animated];
+        _currentAlignedIndex = [self numberOfItemsInSection:0] - 1;
+      } else {
+        [self setContentOffset:CGPointMake(CGRectGetMinX(alignCell.frame), 0)
+                      animated:animated];
+        if (alignCell) {
+          _currentAlignedIndex = [self indexPathForCell:alignCell].row;
+        }
+      }
+      break;
     }
   }
-
 }
 
 -(UICollectionViewCell *)leftCell {
@@ -140,7 +173,7 @@
   for (UICollectionViewCell *cell in [self visibleCells]) {
     cellFrame = CGRectMake(floorf(CGRectGetMinX(cell.frame))-1, floorf(CGRectGetMinY(cell.frame))-1,
                            ceilf(CGRectGetWidth(cell.frame))+2, ceilf(CGRectGetHeight(cell.frame))+2);
-    if (  CGRectContainsPoint(cellFrame, leftPoint)) {
+    if (CGRectContainsPoint(cellFrame, leftPoint)) {
       return cell;
     }
   }
@@ -153,7 +186,7 @@
   for (UICollectionViewCell *cell in [self visibleCells]) {
     cellFrame = CGRectMake(floorf(CGRectGetMinX(cell.frame))-1, floorf(CGRectGetMinY(cell.frame))-1,
                            ceilf(CGRectGetWidth(cell.frame))+2, ceilf(CGRectGetHeight(cell.frame))+2);
-    if (  CGRectContainsPoint(cellFrame, centerPoint)) {
+    if (CGRectContainsPoint(cellFrame, centerPoint)) {
       return cell;
     }
   }
