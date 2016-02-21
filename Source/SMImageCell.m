@@ -42,7 +42,7 @@
   [self sizeToFit];
   self.imageView.frame = (CGRect){{0,0}, size};
   [self.imageView setImage:image];
-  [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+  [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
 
   self.overlayImageView.frame = self.imageView.frame;
   if (overlayImage) {
