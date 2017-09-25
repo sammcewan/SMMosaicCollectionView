@@ -46,24 +46,33 @@
  */
 -(UIImage *)overlayImageForIndex:(NSInteger)index;
 
+
+/**
+ Return the accessibility label for a given index
+
+ @param index index of image
+ @return the string value of the accessibility label
+ */
+-(NSString *)accessibilityLabel:(NSInteger)index;
+
 @end
 
 /**
  *  Various attachment types
  */
 typedef NS_ENUM(NSUInteger, SMMosaicCollectionAlignment) {
-  /**
-   *  Aligns left when more than one and center when one
-   */
-  SMMosaicCollectionAlignmentMixed,
-  /**
-   *  Aligns left always
-   */
-  SMMosaicCollectionAlignmentLeft,
-  /**
-   *  Aligns center always
-   */
-  SMMosaicCollectionAlignmentCenter
+    /**
+     *  Aligns left when more than one and center when one
+     */
+    SMMosaicCollectionAlignmentMixed,
+    /**
+     *  Aligns left always
+     */
+    SMMosaicCollectionAlignmentLeft,
+    /**
+     *  Aligns center always
+     */
+    SMMosaicCollectionAlignmentCenter
 };
 
 /**
@@ -90,7 +99,7 @@ typedef NS_ENUM(NSUInteger, SMMosaicCollectionAlignment) {
 
 /**
  Centers the collection view on the middle cell
-
+ 
  @param animated
  */
 -(void)alignCollectionView:(BOOL)animated;
@@ -106,3 +115,4 @@ typedef NS_ENUM(NSUInteger, SMMosaicCollectionAlignment) {
 @property (nonatomic, readonly) SMMosaicCollectionAlignment alignment;
 
 @end
+
