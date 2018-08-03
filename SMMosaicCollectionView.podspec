@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SMMosaicCollectionView'
-  s.version  = '1.0.6'
+  s.version  = '1.0.7'
   s.license  = { :type => 'MIT' }
   s.summary  = 'A lightweight hoziontal image scroller that centers on the middle cell regardless of the image\'s aspect ratio.'
   s.homepage = 'https://github.com/sammcewan/SMMosaicCollectionView'

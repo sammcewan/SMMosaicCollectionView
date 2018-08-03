@@ -66,6 +66,9 @@
     CGSize size = [self sizeToFit:image.size];
     SMImageCell *cell = (SMImageCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SMImageCell class])
                                                                                  forIndexPath:indexPath];
+    if (image == nil) {
+        return cell;
+    }
     [cell configureCell:image overlay:overlayImage size:size];
     cell.isAccessibilityElement = true;
     if ([self.mosaicDelegate respondsToSelector:@selector(accessibilityLabel:)]) {
